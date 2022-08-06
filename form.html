@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+  </head>
+  <body>
+    <form class="" action="" method="post">
+    <label for="name">User ID : </label>
+      <input type="text" id="uid" name="uid" required minlength="6" maxlength="12"> <br>
+      <label for="pass">Password  : </label>
+      <input type="password" id="pass" name="pass" required minlength="7" maxlength="12"><br>
+      Name  :
+      <input type="text" id="name" name="name" pattern="[A-Za-z]{*}" required> <br>
+      Address:
+      <input type="text" id="add" name="add" > <br>
+      Country:
+      <select  name="choice" required>
+        <option selected="selected"> (Please select a country)</option>
+      </select> <br>
+      ZipCode:
+      <input type="number" id="zip" name="zip" required> <br>
+      Email:
+      <input type="email" id="mail" name="mail" required> <br>
+      Sex:
+      <input type="radio" id="sex" name="sex" value="1" required="required">Male
+      <input type="radio" id="sex" name="sex" value="2" required="required">Female <br>
+      Language:
+      <input type="checkbox" id="check" name="check" value="1">English
+      <input type="checkbox" id="check" name="check" value="2">Non-English <br>
+      About: <br>
+      <textarea name="name" rows="8" cols="80">optional</textarea><br>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>

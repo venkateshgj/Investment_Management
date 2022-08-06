@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>PHP Registeration Page</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "./style.css">
+</head>
+<body>
+  <style>
+  *{
+
+  font-family: 'Poppins', sans-serif;
+}
+#frm{
+    background-color: #778899;
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+              3px 3px 7px rgba(147, 149, 151, 0.671);
+
+              border-radius: 10px;
+    border: solid gray 1px;
+    width:25%;
+    border-radius: 2px;
+    margin: 120px auto;
+    padding: 50px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+  box-shadow: -3px -3px 9px black,
+              3px 3px 7px rgba(147, 149, 151, 0.671);
+
+}
+input[type=submit] {
+background-color: #04AA6D;
+color: green;
+text-align: center;
+padding: 12px 20px;
+margin: 8px 0;
+
+border: none;
+cursor: pointer;
+width: 25%;
+float:center;
+
+}
+body {
+  background-image: url("Login1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  </style>
+    <div id = "frm">
+        <h1>Register</h1>
+        <form name="f1" action = "register.php" onsubmit = "return validation()" method = "POST">
+            <p>
+                <table>
+                  <tr>
+                      <td height="40px">
+                        <label> Username    : </label>
+                      </td>
+                      <td>
+                        <input type = "text" id ="name" name  = "name" />
+                      </td>
+                    </tr>
+                    <tr>
+                        <td height="40px">
+                          <label> Password    : </label>
+                        </td>
+                        <td>
+                          <input type = "password" id ="pass" name  = "pass" />
+                        </td>
+                      </tr>
+
+                </table>
+            </p>
+            <p>
+                <input type =  "submit" id = "btn" value = "Register" />
+            </p>
+        </form>
+    </div>
+
+    <script>
+            function validation()
+            {
+                var na=document.f1.name.value;
+                var ps=document.f1.pass.value;
+                if(id.length=="" && na.length=="" && ps.length=="") {
+                    alert("User Name and Password fields are empty");
+                    return false;
+                }
+                else
+                {
+                    if(na.length=="") {
+                        alert("User Name is empty");
+                        return false;
+                    }
+                    if (ps.length=="") {
+                    alert("Password field is empty");
+                    return false;
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

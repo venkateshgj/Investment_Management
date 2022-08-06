@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>PHP login system</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "./style.css">
+</head>
+<body>
+  <styles>
+    body {
+      background-image: url("login.jpg");
+      background-color: #cccccc;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </styles>
+    <div id = "frm">
+        <h1>Login</h1>
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "post">
+            <p>
+                <label> UserName: </label>
+                <input type = "text" id ="name" name  = "name" />
+            </p>
+            <p>
+                <label> Password: </label>
+                <input type = "password" id ="pass" name  = "pass" />
+            </p>
+			<a href="./register.html">New User? Click Here</a>
+			<br/>
+			<a href="./password.html">Forgot Password</a>
+            <p>
+                <input type =  "submit" id="btn" value = "Login" />
+            </p>
+        </form>
+    </div>
+
+    <script>
+            function validation()
+            {
+                var id=document.f1.name.value;
+                var ps=document.f1.pass.value;
+                if(id.length=="" && ps.length=="") {
+                    alert("User name and Password fields are empty");
+                    return false;
+                }
+                else
+                {
+                    if(id.length=="") {
+                        alert("User name is empty");
+                        return false;
+                    }
+                    if (ps.length=="") {
+                    alert("Password field is empty");
+                    return false;
+                    }
+                }
+            }
+        </script>
+</body>
+</html>
